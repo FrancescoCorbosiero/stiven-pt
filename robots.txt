@@ -1,0 +1,65 @@
+# robots.txt for Stiven PT Website
+# https://stivenpt.com
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Protect sensitive directories
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow access to assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+
+# Sitemap location
+Sitemap: https://stivenpt.com/sitemap.xml
+
+# Rate limiting for respectful crawling
+Crawl-delay: 1
+
+# Additional files to exclude
+Disallow: /*.json$
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /*.temp$
